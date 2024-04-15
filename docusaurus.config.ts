@@ -54,7 +54,7 @@ const config: Config = {
           to: "docs/intro"
         },
         {
-          href: 'https://localhost:8000/docs#/',
+          href: 'http://localhost:8000/docs#/',
           label: 'API',
           position: 'left',
         },
