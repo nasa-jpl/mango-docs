@@ -32,7 +32,7 @@ pipeline {
     stage('Build Docs') {
       steps {
         script {
-            def build = sh(script: 'yarn run build --force', returnStdout: true, returnStatus: true)
+            def build = sh(script: 'yarn run build', returnStdout: true, returnStatus: true)
             if (build == 0) {
                 publishChecks name: 'build', title: 'Build Docs', summary: 'Check build output', text: "build process returned status code: ${build}", conclusion: 'SUCCESS', status: 'COMPLETED'
             } else {
