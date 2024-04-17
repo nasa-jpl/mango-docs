@@ -47,7 +47,7 @@ pipeline {
         allOf {
           anyOf {
             // Trigger docker builds off develop, main, or tags
-            branch 'feature/52/docs-ci'
+            branch '*'
             branch 'develop'
             branch 'main'
             tag '*'
@@ -71,7 +71,7 @@ pipeline {
         allOf {
           anyOf {
             // Trigger push to Artifactory off develop, main, or tags
-            branch 'feature/52/docs-ci'
+            branch '*'
             branch 'develop'
             branch 'main'
             tag '*'
