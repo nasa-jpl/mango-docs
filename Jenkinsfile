@@ -8,9 +8,9 @@ pipeline {
   }
 
   environment {
-    DOCKER_IMAGE_NAME = 'gmat-docs'
+    DOCKER_IMAGE_NAME = 'mango-docs'
     ARTIFACTORY_URL = '***REMOVED***'
-    ARTIFACTORY_REPO = 'gov/nasa/jpl/gracec/gmat'
+    ARTIFACTORY_REPO = '***REMOVED***'
   }
 
   options {
@@ -24,8 +24,7 @@ pipeline {
   stages {
     stage('Installation') {
       steps {
-        sh 'npm install -g yarn'
-        sh 'yarn install --frozen-lockfile'
+        sh 'npm ci'
       }
     }
 
