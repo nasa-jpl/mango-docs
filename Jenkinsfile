@@ -10,7 +10,7 @@ pipeline {
   environment {
     DOCKER_IMAGE_NAME = 'mango-docs'
     ARTIFACTORY_URL = '***REMOVED***'
-    ARTIFACTORY_REPO = 'gov/nasa/jpl/gracec/gmat'
+    ARTIFACTORY_REPO = '***REMOVED***'
   }
 
   options {
