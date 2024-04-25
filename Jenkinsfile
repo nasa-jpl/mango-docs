@@ -70,7 +70,6 @@ pipeline {
         allOf {
           anyOf {
             // Trigger push to Artifactory off develop, main, or tags
-            branch '*'
             branch 'develop'
             branch 'main'
             tag '*'
