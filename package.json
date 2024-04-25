@@ -1,6 +1,6 @@
 {
-  "name": "gmat-docs",
-  "version": "0.0.0",
+  "name": "mango-docs",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
