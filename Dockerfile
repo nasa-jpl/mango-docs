@@ -2,14 +2,12 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY package.json /app/
-
-RUN yarn install --frozen-lockfile
-
 COPY . /app/
 
-RUN yarn build
+RUN npm i
+
+RUN npm run build
 
 EXPOSE 3000
 
-CMD ["yarn", "serve"]
+CMD ["npm", "run", "serve"]

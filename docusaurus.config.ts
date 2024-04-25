@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'GMAT',
+  title: 'MANGO',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -42,9 +42,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'GMAT',
+      title: 'MANGO',
       logo: {
-        alt: 'GMAT',
+        alt: 'MANGO',
         src: 'img/logo.svg',
       },
       items: [
