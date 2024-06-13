@@ -1,13 +1,14 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import 'dotenv/config';
 
 const config: Config = {
   title: 'MANGO',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: process.env.URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/mango/docs/',
@@ -54,7 +55,7 @@ const config: Config = {
           to: "docs/intro"
         },
         {
-          href: 'http://localhost:8000/docs#/',
+          href: process.env.URL + '/mango/api/docs',
           label: 'API',
           position: 'left',
         },
