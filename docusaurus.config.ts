@@ -4,8 +4,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 import 'dotenv/config';
 
 const config: Config = {
-  title: 'MANGO',
+  title: 'MANGO User Guide',
   favicon: 'img/favicon.ico',
+  tagline: 'Monitoring and ANalysis for Gravity Operations',
 
   // Set the production url of your site here
   url: process.env.URL,
@@ -43,7 +44,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'MANGO',
+      title: 'MANGO User Guide',
       logo: {
         alt: 'MANGO',
         src: 'img/logo.svg',
@@ -53,6 +54,11 @@ const config: Config = {
           label: 'Docs',
           position: 'left',
           to: "docs/intro"
+        },
+        {
+          href: process.env.URL + '/mango/',
+          label: 'UI',
+          position: 'left',
         },
         {
           href: process.env.URL + '/mango/api/docs',
