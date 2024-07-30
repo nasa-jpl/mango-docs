@@ -14,19 +14,19 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Tutorials",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>Read stuff.</>,
-    route: "docs/tutorials/overview",
+    description: <>Learn how to use MANGO</>,
+    route: "docs/tutorials",
   },
   {
     title: "Latest Features",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: <>Check out the latest features.</>,
-    route: "docs/latest-features",
+    description: <>Check out the latest features</>,
+    route: "",
   },
   {
     title: "Need Help?",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: <>Reach out to the dev team for help.</>,
+    description: <>Reach out to the team</>,
     route: "docs/need-help",
   },
 ];
