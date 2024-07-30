@@ -14,7 +14,7 @@ sidebar_position: 1
     Description
   </th>
   <th>
-    Use
+    Used for
   </th>
   <tr>
     <td>
@@ -35,20 +35,22 @@ sidebar_position: 1
       <code>mango.users</code>
     </td>
     <td>
-      MANGO tool users
+      MANGO UI users
     </td>
     <td>
-      --
+      <ul padding="15px">
+        <li>Access to MANGO UI</li>
+      </ul>
     </td>
   </tr>
 </table>
 
-Reach out to Marjorie Lucas to be added to either of these groups.
+Reach out to Marjorie Lucas [marjorie.j.lucas@jpl.nasa.gov] to be added to either of these groups.
 
 
 ## Resources
 
-| Resource | Use | Access |
+| Resource | Used for | Access |
 | ---- | ----- | ----- |
 | <a href="***REMOVED***">Jenkins</a> | CI | POC: Nga Chung |
 | <a href="***REMOVED***">Artifactory</a> | Artifact repository | `mango.dev`
