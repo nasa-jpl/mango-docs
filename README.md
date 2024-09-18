@@ -8,6 +8,13 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 $ npm i
 ```
 
+### Create certificates
+```
+npm run create-cert
+```
+
+Creates a self-signed certificate for local development.
+
 ### Local Development
 
 ```
