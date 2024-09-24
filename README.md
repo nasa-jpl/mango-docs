@@ -9,11 +9,13 @@ $ npm i
 ```
 
 ### Create certificates
-```
-npm run create-cert
-```
 
-Creates a self-signed certificate for local development.
+Create a self-signed certificate for local development.
+
+```
+brew install mkcert
+mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 'localhost'
+```
 
 ### Local Development
 
