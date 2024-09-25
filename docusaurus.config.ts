@@ -70,7 +70,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: '***REMOVED***',
+          href: '',
           label: 'GitHub',
           position: 'right',
         },

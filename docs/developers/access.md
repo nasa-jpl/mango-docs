@@ -52,8 +52,8 @@ Reach out to Marjorie Lucas [marjorie.j.lucas@jpl.nasa.gov] to be added to eithe
 
 | Resource | Used for | Access |
 | ---- | ----- | ----- |
-| <a href="***REMOVED***">Jenkins</a> | CI | POC: Nga Chung |
-| <a href="***REMOVED***">Artifactory</a> | Artifact repository | `mango.dev`
+| <a href="">Jenkins</a> | CI | POC: Nga Chung |
+| <a href="">Artifactory</a> | Artifact repository | `mango.dev`
 | `mass-change-viz` | Deployment server | POC: Nga Chung
 
 

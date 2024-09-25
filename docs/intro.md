@@ -16,5 +16,3 @@ Highlighted features of MANGO:
 - Ability to compare data measurements across different orbits and GRACE missions
 
 Reach out to Nga Chung [nga.t.chung@jpl.nasa.gov] to request access to MANGO.
-
-Access the MANGO UI [here](https://mass-change-viz.jpl.nasa.gov/mango/).

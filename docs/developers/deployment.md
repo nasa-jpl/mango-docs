@@ -11,15 +11,15 @@ Documentation was generated using Docusaurus.
 <table>
   <tr>
     <td>GitHub Repo</td>
-    <td><a href="***REMOVED***">mango-docs</a></td>
+    <td><a href="">mango-docs</a></td>
   </tr>
   <tr>
     <td>Jenkins CI Pipeline</td>
-    <td><a href="***REMOVED***/job/docs/">cae-jenkins2.jpl.nasa.gov/job/Mass-Change-Viz/job/docs</a></td>
+    <td><a href=""></a></td>
   </tr>
   <tr>
     <td>Artifactory</td>
-    <td><a href="***REMOVED***/mango-docs">***REMOVED***</a></td>
+    <td><a href=""></a></td>
   </tr>
   <tr>
     <td>Deployed to</td>
@@ -27,7 +27,6 @@ Documentation was generated using Docusaurus.
   </tr>
 </table>
 
-See deployment instructions on `sdeploy@mass-change-viz:~/mango_docs/DEPLOY.md`.
 
 ## Web UI
 This is the MANGO frontend.
@@ -35,23 +34,21 @@ This is the MANGO frontend.
 <table>
   <tr>
     <td>GitHub Repo</td>
-    <td><a href="***REMOVED***">mango-ui</a></td>
+    <td><a href="">mango-ui</a></td>
   </tr>
   <tr>
     <td>Jenkins CI Pipeline</td>
-    <td><a href="***REMOVED***/job/ui/">cae-jenkins2.jpl.nasa.gov/job/Mass-Change-Viz/job/ui</a></td>
+    <td><a href=""></a></td>
   </tr>
   <tr>
     <td>Artifactory</td>
-    <td><a href="***REMOVED***/mango-ui">***REMOVED***</a></td>
+    <td><a href=""></a></td>
   </tr>
   <tr>
     <td>Deployed to</td>
     <td><code>mass-change-viz</code> port <code>5174</code></td>
   </tr>
 </table>
-
-See deployment instructions on `sdeploy@mass-change-viz:~/mango_ui/DEPLOY.md`.
 
 ## Backend
 

@@ -10,7 +10,7 @@ To contribute code, follow the guidelines below.
 ## Preparing your Fork
 1. Click `Fork` on Github to create your own fork e.g. `username/mango-docs`
 
-2. Clone your project: `***REMOVED***`
+2. Clone your project: ``
 
 3. `cd mango-docs`
 
