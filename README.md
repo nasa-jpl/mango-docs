@@ -8,6 +8,15 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 $ npm i
 ```
 
+### Create certificates
+
+Create a self-signed certificate for local development.
+
+```
+brew install mkcert
+mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 'localhost'
+```
+
 ### Local Development
 
 ```
@@ -27,6 +36,8 @@ This command generates static content into the `build` directory and can be serv
 ### Production
 
 ```
-$ npm run serve
+$ node server.js
 ```
+
+This will start the node express server, which will serve the contents of the `build` directory over SSL. The default port is `3000`.
 
