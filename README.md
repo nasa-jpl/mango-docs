@@ -36,6 +36,8 @@ This command generates static content into the `build` directory and can be serv
 ### Production
 
 ```
-$ npm run serve
+$ node server.js
 ```
+
+This will start the node express server, which will serve the contents of the `build` directory over SSL. The default port is `3000`.
 
