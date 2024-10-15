@@ -41,3 +41,12 @@ $ node server.js
 
 This will start the node express server, which will serve the contents of the `build` directory over SSL. The default port is `3000`.
 
+### Docker
+
+Run the following commands from the repo root to build the docker image and run the container locally:
+
+```
+$ docker build -t mango-docs .
+$ docker run -d --restart unless-stopped --name mango-docs -p 3000:3000 -v ./.cert:/.cert mango-docs
+```
+
