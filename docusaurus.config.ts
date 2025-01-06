@@ -9,7 +9,7 @@ const config: Config = {
   tagline: 'Monitoring and ANalysis for Gravity Operations',
 
   // Set the production url of your site here
-  url: process.env.URL,
+  url: process.env.MANGO_HOST_URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/mango/docs/',
   onBrokenLinks: 'throw',
@@ -55,12 +55,12 @@ const config: Config = {
           to: "docs/intro"
         },
         {
-          href: process.env.URL + '/mango/',
+          href: process.env.MANGO_HOST_URL + '/mango/',
           label: 'UI',
           position: 'left',
         },
         {
-          href: process.env.URL + '/mango/api/docs',
+          href: process.env.MANGO_HOST_URL + '/mango/api/docs',
           label: 'API',
           position: 'left',
         },
