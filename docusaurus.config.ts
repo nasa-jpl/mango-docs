@@ -69,7 +69,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: '***REMOVED***',
+          href: 'https://github.com/nasa-jpl/mango-docs',
           label: 'GitHub',
           position: 'right',
         },
