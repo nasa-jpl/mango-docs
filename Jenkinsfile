@@ -9,8 +9,8 @@ pipeline {
 
   environment {
     DOCKER_IMAGE_NAME = 'mango-docs'
-    ARTIFACTORY_URL = ''
-    ARTIFACTORY_REPO = ''
+    ARTIFACTORY_URL = "${params.ARTIFACTORY_URL}"
+    ARTIFACTORY_REPO = "${params.ARTIFACTORY_REPO}"
   }
 
   options {
