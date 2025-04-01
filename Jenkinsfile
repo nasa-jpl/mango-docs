@@ -81,7 +81,8 @@ pipeline {
       steps {
         script {
           withCredentials([usernamePassword(credentialsId: 'artifactory-credentials', usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
-            sh "docker login -u ${ARTIFACTORY_USER} -p ${ARTIFACTORY_PASSWORD} ${ARTIFACTORY_URL}"
+            sh "printenv"
+            sh "docker login -u ${ARTIFACTORY_USER} -p ${ARTIFACTORY_PASSWORD} ${env.ARTIFACTORY_URL}"
             sh "docker push ${ARTIFACTORY_TAG}"
           }
         }
