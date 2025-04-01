@@ -9,8 +9,6 @@ pipeline {
 
   environment {
     DOCKER_IMAGE_NAME = 'mango-docs'
-    // ARTIFACTORY_URL = "${params.ARTIFACTORY_URL}"
-    // ARTIFACTORY_REPO = "${params.ARTIFACTORY_REPO}"
   }
 
   options {
@@ -33,8 +31,8 @@ pipeline {
         script {
           configFileProvider([configFile(fileId: "b3f34083-3069-406d-9ce6-de67213c1b27", variable: 'configFile')]) {
             def props = readProperties file: "$configFile"
-            def ARTIFACTORY_URL = props['ARTIFACTORY_URL']
-            sh "print ${ARTIFACTORY_URL}"
+            env.ARTIFACTORY_URL = props['ARTIFACTORY_URL']
+            env.ARTIFACTORY_REPO = props['ARTIFACTORY_REPO']
           }
         }
       }
@@ -70,7 +68,7 @@ pipeline {
       steps {
           script {
               DOCKER_IMAGE_VERSION = env.GIT_BRANCH.replaceAll('/', '_')
-              ARTIFACTORY_TAG = "${params.ARTIFACTORY_URL}/${params.ARTIFACTORY_REPO}/${env.DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}"
+              ARTIFACTORY_TAG = "${env.ARTIFACTORY_URL}/${env.ARTIFACTORY_REPO}/${env.DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}"
               docker.build("${ARTIFACTORY_TAG}", '-f Dockerfile .')
           }
       }
@@ -93,8 +91,8 @@ pipeline {
       steps {
         script {
           withCredentials([usernamePassword(credentialsId: 'artifactory-credentials', usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
-            sh "print ${params.ARTIFACTORY_URL}"
-            sh "docker login -u ${ARTIFACTORY_USER} -p ${ARTIFACTORY_PASSWORD} ${params.ARTIFACTORY_URL}"
+            sh "echo ${env.ARTIFACTORY_URL}"
+            sh "docker login -u ${ARTIFACTORY_USER} -p ${ARTIFACTORY_PASSWORD} ${env.ARTIFACTORY_URL}"
             // sh "docker push ${ARTIFACTORY_TAG}"
           }
         }
