@@ -29,11 +29,13 @@ pipeline {
     }
 
     stage('Read Config into env') {
-      script {
-        configFileProvider([configFile(fileId: "b3f34083-3069-406d-9ce6-de67213c1b27", variable: 'configFile')]) {
-          def props = readProperties file: "$configFile"
-          def ARTIFACTORY_URL = props['ARTIFACTORY_URL']
-          sh "print ${ARTIFACTORY_URL}"
+      steps {
+        script {
+          configFileProvider([configFile(fileId: "b3f34083-3069-406d-9ce6-de67213c1b27", variable: 'configFile')]) {
+            def props = readProperties file: "$configFile"
+            def ARTIFACTORY_URL = props['ARTIFACTORY_URL']
+            sh "print ${ARTIFACTORY_URL}"
+          }
         }
       }
     }
