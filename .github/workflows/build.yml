@@ -1,0 +1,56 @@
+on:
+  push:
+    branches:
+      - develop
+    # tags:
+    #   - '*'
+  workflow_dispatch:
+    inputs:
+    environment:
+      required: true
+      default: 'mango_docs'
+
+jobs:
+  build_mango_docs:
+    environment: mango_docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.20
+
+      - name: Install dependencies
+        run: |
+          npm ci
+        shell: bash
+
+      - name: Build application
+        run: |
+          npm run build
+        shell: bash
+
+      - name: Set docker tag environment variable
+        run: |
+          GITHUB_REF_NAME_CLEAN="${GITHUB_REF_NAME//\//_}"
+          DOCKER_TAG="${{ env.ARTIFACTORY_REGISTRY }}/${{ env.PROJECT_PATH }}:${GITHUB_REF_NAME_CLEAN}
+          echo "DOCKER_TAG=$DOCKER_TAG" >>${GITHUB_ENV}
+
+      - name: Log in to Artifactory registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.ARTIFACTORY_REGISTRY }}
+          username: ${{ env.ARTIFACTORY_USER }}
+          password: ${{ secrets.artifactory }}
+
+      - name: Build and push algorithm Docker image
+        id: push-algorithm
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ${{ env.DOCKER_TAG }}
