@@ -34,10 +34,16 @@ jobs:
           printenv
         shell: bash
 
+      - name: Create env variable of lowercase GitHub repo name
+        run: |
+            GITHUB_REPO_LOWER=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
+            echo "GITHUB_REPO_LOWER=$GITHUB_REPO_LOWER" >>${GITHUB_ENV}
+        shell: bash
+
       - name: Set docker tag environment variable
         run: |
           GITHUB_REF_NAME_CLEAN="${GITHUB_REF_NAME//\//_}"
-          DOCKER_TAG="${{ vars.ARTIFACTORY_REGISTRY }}/${{ vars.PROJECT_PATH }}:${GITHUB_REF_NAME_CLEAN}"
+          DOCKER_TAG="ghcr.io/${{ env.GITHUB_REPO_LOWER }}:${GITHUB_REF_NAME_CLEAN}"
           echo "DOCKER_TAG=$DOCKER_TAG" >>${GITHUB_ENV}
 
       - name: Log in to GitHub Container Registry
