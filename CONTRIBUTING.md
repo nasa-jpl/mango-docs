@@ -1,25 +1,25 @@
-
 # Contributing Guidelines
-We welcome contributions of any kind. Feel free to reach out to the MANGO community with questions or comments
-through our slack channels or through GitHub directly.
 
-MANGO Docs were generated using Docusaurus. Users can contribute documentation through markdown or react. See [here](https://docusaurus.io/docs/create-doc) for Docusaurus tutorials. 
+We welcome contributions of any kind. Feel free to reach out to the MANGO community with questions or comments
+through email at `mango.dev@jpl.nasa.gov` or through GitHub directly.
+
+Reporting a bug or have a feature request? Open a ticket [here](https://github.com/nasa-jpl/mango-docs/issues). Please make sure to search existing tickets before opening new ones to avoid duplication.
 
 To contribute code, follow the guidelines below.
 
 ## Preparing your Fork
-1. Click `Fork` on Github to create your own fork e.g. `username/mango-docs`
 
-2. Clone your project: `git@github.com:nasa-jpl/mango-docs.git`
+1. Create your own fork of `nasa-jpl/mango-docs`
+
+2. Clone your project: `git clone git@github.com:username/mango-docs.git`
 
 3. `cd mango-docs`
 
 4. Install project requirements: `npm i`
 
-5. Create a branch: `git checkout -b new-feature`
-
 ## Making your Changes
-1. Add changelog entry crediting yourself
+
+1. Create a branch: `git checkout -b new-feature`
 
 2. Make code changes
 
@@ -28,6 +28,7 @@ To contribute code, follow the guidelines below.
 4. Commit your changes: `git commit -m "Added new feature"`
 
 ## Creating Pull Requests
+
 1. Push your commit to get it back up to your fork: `git push origin HEAD`
 
 2. Navigate to Github and create a pull request.
