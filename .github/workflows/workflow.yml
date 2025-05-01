@@ -2,8 +2,10 @@ on:
   push:
     branches:
       - develop
-    # tags:
-    #   - '*'
+      - main
+      - chore/actions
+    tags:
+      - '*'
   workflow_dispatch:
     inputs:
     environment:
@@ -30,8 +32,8 @@ jobs:
 
       - name: Build application
         run: |
-          npm run build
           printenv
+          npm run build
         shell: bash
 
       - name: Create env variable of lowercase GitHub repo name
