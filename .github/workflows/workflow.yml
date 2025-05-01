@@ -44,7 +44,7 @@ jobs:
       - name: Set docker tag environment variable
         run: |
             if [[ $GITHUB_REF == refs/tags/* ]]; then
-              DOCKER_TAG="ghcr.io/${{ env.GITHUB_REPO_LOWER }}:${GITHUB_REF}"
+              DOCKER_TAG="ghcr.io/${{ env.GITHUB_REPO_LOWER }}:${GITHUB_REF#refs/tags/}"
             else
               GITHUB_REF_NAME_CLEAN="${GITHUB_REF_NAME//\//_}"
               DOCKER_TAG="ghcr.io/${{ env.GITHUB_REPO_LOWER }}:${GITHUB_REF_NAME_CLEAN}"
