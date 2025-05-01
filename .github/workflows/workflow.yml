@@ -28,6 +28,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+          echo "MANGO_HOST_URL=${{ secrets.MANGO_HOST_URL }}" >> $GITHUB_ENV
         shell: bash
 
       - name: Build application
