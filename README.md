@@ -1,4 +1,8 @@
+[![.github/workflows/build.yml](https://github.com/nasa-jpl/mango-docs/actions/workflows/build.yml/badge.svg)](https://github.com/nasa-jpl/mango-docs/actions/workflows/build.yml)
+
 # Monitoring and ANalysis for Gravity Operations (MANGO) Docs
+
+User documentation for the MANGO Web UI.
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
