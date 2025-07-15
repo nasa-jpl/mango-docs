@@ -17,12 +17,12 @@ const FeatureList: FeatureItem[] = [
     description: <>Learn how to use MANGO</>,
     route: "docs/tutorials",
   },
-  {
-    title: "Latest Features",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: <>Check out the latest features</>,
-    route: "",
-  },
+  // {
+  //   title: "Latest Features",
+  //   Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+  //   description: <>Check out the latest features</>,
+  //   route: "",
+  // },
   {
     title: "Need Help?",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
@@ -51,7 +51,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row" style={{justifyContent: "center"}}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
