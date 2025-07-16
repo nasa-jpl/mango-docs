@@ -51,6 +51,7 @@ Run the following commands from the repo root to build the docker image and run 
 
 ```
 $ docker build -t mango-docs .
-$ docker run -d --restart unless-stopped --name mango-docs -p 3000:3000 -v ./.cert:/.cert mango-docs
+
+$ docker run -d --restart unless-stopped --name mango-docs -p 3000:3000 -v $KEY_PATH:/app/.cert/key.pem -v $CERT_PATH$:/app/.cert/cert.pem mango-docs
 ```
 

@@ -7,18 +7,18 @@ on:
       - main
   pull_request:
     branches: ["**"]
-    types: [opened, reopened, edited]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
     inputs:
-    environment:
-      required: true
-      default: 'mango_docs'
+      environment:
+        required: true
+        default: 'mango_docs'
 
 jobs:
   build_mango_docs:
     name: Build MANGO Docs
     environment: mango_docs
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18.20
+          node-version: 20.19.0
 
       - name: Install dependencies
         run: |
